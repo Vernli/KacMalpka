@@ -1,0 +1,21 @@
+img
+{
+width: 100px;
+height: 100px;
+
+}
+
+.bgall
+{
+    background-color: #3C2F0E;
+    color: bisque;
+    font-family:'Times New Roman', Times, serif;
+}
+.up
+{
+    padding: 0%;
+}
+.down
+{
+    margin: 10px;
+}
