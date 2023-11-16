@@ -1,5 +1,14 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  padding: 0;
+}
+
+.root {
+  margin: 0;
+}
 .font-nav {
-  font-family: 'Agbalumo', sans-serif;
   font-size: 1.2rem;
 }
 
@@ -13,6 +22,7 @@
 
 .bg-nav {
   background-color: #6b5d54 !important;
+  width: 100vw !important;
 }
 
 #logo {
@@ -29,6 +39,7 @@
 .box {
   outline: none;
   border: none;
+  margin-left: 10px;
   width: 35px;
   height: 35px;
   background-color: #f2d2bd;
@@ -36,4 +47,15 @@
 }
 .box:hover {
   scale: 1.1;
+}
+
+.hero img {
+  width: 100vw;
+  height: 75vh;
+  object-fit: cover;
+}
+
+.test {
+  height: 200vh;
+  width: 100vw;
 }

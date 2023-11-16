@@ -1,0 +1,9 @@
+.carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
+}
+
+.carousel-indicators > button {
+  height: 5px !important;
+  background-color: #f2d2bd !important;
+}
