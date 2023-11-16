@@ -5,13 +5,24 @@ services:
     image: "mysql:5.7"
     container_name: kacmalpka-mysql
     volumes:
-      - kacmalpka-data:/var/lib/mysql/data
+      - kacmalpka-data:/var/lib/mysql
     ports:
-      - 5432:5432
+      - 3306:3306
+    ulimits:
+      nofile:
+        soft: "1024"
+        hard: "2048"
     environment:
-      - MYSQL_DB:kacmalpka
-      - MYSQL_USER:kacmalpka
-      - MYSQL_PASSWORD:kacmalpka
+      - MYSQL_ROOT_PASSWORD=rootkacmalpka
+      - MYSQL_DATABASE=kacmalpka
+      - MYSQL_USER=kacmalpka
+      - MYSQL_PASSWORD=kacmalpka
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u $$MYSQL_USER --password=$$MYSQL_PASSWORD
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 55
 
   kacmalpka-app:
     build: ./kacmalpka-app
@@ -21,16 +32,23 @@ services:
     ports:
       - 8000:8000
     links:
-      - kacmalpka-postgres
+      - kacmalpka-mysql
+    depends_on:
+      kacmalpka-mysql:
+        condition: service_healthy
 
-  kacmalpka-fe:
-    build: ./kacmalpka-fe
-    container_name: kacmalpka-fe
-    ports:
-      - 4200:80
-    links:
-      - kacmalpka-app
+
+  # COMMENT: na razie nie jest potrzebne, a wstrzymuje sprawdzenie czy baza + django dzialaja
+  # COMMENT: brakuje pliku package.json - jak ktos ogarnia npm i reakta to niech to zalatwi w wolnej chwili
+  # kacmalpka-fe:
+  #   build: ./kacmalpka-fe
+  #   container_name: kacmalpka-fe
+  #   ports:
+  #     - 4200:80
+  #   links:
+  #     - kacmalpka-app
 
 
 volumes:
   kacmalpka-data:
+  
