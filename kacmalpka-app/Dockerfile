@@ -12,4 +12,4 @@ EXPOSE 8000
 # Tutaj mozemy dodac zmienne srodowiskowe
 ENV SOME_ENV 1
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:80"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
