@@ -1,26 +1,30 @@
 .hero {
+  position: relative;
   display: flex;
   flex-direction: row;
 }
 
-.hero img {
-  width: 30vw;
-  height: 75vh;
-  object-fit: contain;
-}
-
-.block {
-  width: 70vw;
+.hero-img {
+  width: 60%;
   height: 70vh;
 }
 
+.hero-img img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
 .block {
+  width: 40%;
+  height: 70vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
+  padding: 16px;
   background-color: #82746a;
+  box-shadow: inset -14px 1px 10px -6px rgb(0, 0, 0);
 }
 
 .text {

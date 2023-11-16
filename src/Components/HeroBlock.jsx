@@ -1,5 +1,4 @@
 import './HeroBlock.css';
-import { Button } from 'react-bootstrap';
 const HeroBlock = ({ imageInfo }) => {
   return (
     <div className="hero">
@@ -10,8 +9,9 @@ const HeroBlock = ({ imageInfo }) => {
         </div>
         <button className="btn-hero">Więcej...</button>
       </div>
-
-      <img src={imageInfo.src} alt={imageInfo.alt} />
+      <div className="hero-img">
+        <img src={imageInfo.src} alt={imageInfo.alt} />
+      </div>
     </div>
   );
 };

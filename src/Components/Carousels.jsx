@@ -22,7 +22,7 @@ const data = [
     src: './images/hero-vodka.jpg',
     alt: 'vodka',
     title: 'Vodka Voyager',
-    text: 'Witaj w krainie, gdzie każdy łyk wódki to podróż w nieznane! Nasza kolekcja wódek zabierze Cię w ekscytującą podróż po różnorodnych smakach, aromatach i kulturach. Od klasycznych, czystych wódek po zaskakujące kompozycje smakowe, stworzyliśmy miejsce, gdzie każda butelka jest jak tajemnicza mapa do odkrycia. Zanurz się w świecie Vodka Voyager, gdzie elegancja spotyka się z odwagą eksperymentowania. Zamów teraz i rozpocznij podróż po zmysłowym spektrum wódek, które czekają, aby zaskoczyć Twój podniebienie i zaintrygować zmysły!',
+    text: 'Witaj w krainie, gdzie każdy łyk wódki to podróż w nieznane! Nasza kolekcja wódek zabierze Cię w ekscytującą podróż po różnorodnych smakach, aromatach i kulturach. Od klasycznych, czystych wódek po zaskakujące kompozycje smakowe, stworzyliśmy miejsce, gdzie każda butelka jest jak tajemnicza mapa do odkrycia. Zanurz się w świecie Vodka Voyager, gdzie elegancja spotyka się z odwagą eksperymentowania.',
   },
 ];
 

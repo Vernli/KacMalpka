@@ -1,6 +1,5 @@
 import Belt from './Components/Belt';
 import Carousels from './Components/Carousels';
-import ContactUs from './Components/ContactUs';
 import Footer from './Components/Footer';
 import Navigation from './Components/Navigation';
 

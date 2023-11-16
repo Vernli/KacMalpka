@@ -5,5 +5,8 @@
   border-bottom: 2px solid #f2d2bd;
 }
 
-div {
+@media screen and (max-width: 768px) {
+  .search {
+    width: 60%;
+  }
 }
