@@ -1,0 +1,10 @@
+input[type='text'] {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #f2d2bd;
+}
+
+div {
+  margin-left: 4px;
+}

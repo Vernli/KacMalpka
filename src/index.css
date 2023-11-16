@@ -1,2 +1,39 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+.font-nav {
+  font-family: 'Agbalumo', sans-serif;
+  font-size: 1.2rem;
+}
 
+#navbar {
+  color: white;
+}
+
+.bg-bisque {
+  background-color: #f2d2bd;
+}
+
+.bg-nav {
+  background-color: #6b5d54 !important;
+}
+
+#logo {
+  width: 50px;
+  filter: saturate(50%) sepia(25%);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  outline: none;
+  border: none;
+  width: 35px;
+  height: 35px;
+  background-color: #f2d2bd;
+  border-radius: 50%;
+}
+.box:hover {
+  scale: 1.1;
+}
