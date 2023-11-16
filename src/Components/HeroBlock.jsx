@@ -8,7 +8,7 @@ const HeroBlock = ({ imageInfo }) => {
           <h1>{imageInfo.title}</h1>
           <p>{imageInfo.text}</p>
         </div>
-        <Button>Wiecej...</Button>
+        <button className="btn-hero">Więcej...</button>
       </div>
 
       <img src={imageInfo.src} alt={imageInfo.alt} />

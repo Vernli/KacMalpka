@@ -1,0 +1,10 @@
+.belt {
+  width: 100;
+  display: flex;
+}
+
+.belt img {
+  width: 20%;
+  height: 20vh;
+  object-fit: cover;
+}

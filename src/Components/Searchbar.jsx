@@ -4,7 +4,7 @@ import './Searchbar.css';
 const Searchbar = () => {
   return (
     <form className="flex-center">
-      <input type="text" placeholder="Szukaj..." />
+      <input className="search" type="text" placeholder="Szukaj..." />
       <button className="box flex-center">
         <LiaSearchSolid />
       </button>

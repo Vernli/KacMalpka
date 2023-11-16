@@ -22,7 +22,6 @@
 
 .bg-nav {
   background-color: #6b5d54 !important;
-  width: 100vw !important;
 }
 
 #logo {
@@ -51,7 +50,7 @@
 
 .hero img {
   width: 100vw;
-  height: 75vh;
+  height: 70vh;
   object-fit: cover;
 }
 

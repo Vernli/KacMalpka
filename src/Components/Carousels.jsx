@@ -30,7 +30,7 @@ const Carousels = () => {
   return (
     <Carousel className="hero" fade>
       {data.map((item) => (
-        <Carousel.Item>
+        <Carousel.Item key={item.id}>
           <HeroBlock imageInfo={item} />
         </Carousel.Item>
       ))}
