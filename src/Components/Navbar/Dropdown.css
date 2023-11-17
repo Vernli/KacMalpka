@@ -1,0 +1,17 @@
+.dropdown-container {
+  position: absolute;
+  bottom: -105px;
+  left: 0;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--text-offwhite);
+  border-radius: 20px;
+}
+
+.dropdown-container > a {
+  text-decoration: none;
+  color: var(--text-offwhite);
+}
