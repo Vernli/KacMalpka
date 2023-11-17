@@ -1,6 +1,18 @@
 import Navbar from '../Components/Navbar/Navbar';
+import { Outlet } from 'react-router';
 
 const RootLayout = () => {
-  return <Navbar />;
+  return (
+    <>
+      <div className="root-layout">
+        <header>
+          <Navbar />
+        </header>
+        <main>
+          <Outlet />
+        </main>
+      </div>
+    </>
+  );
 };
 export default RootLayout;
