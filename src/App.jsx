@@ -1,10 +1,6 @@
-import Belt from './Components/Belt';
-import Carousels from './Components/Carousels';
-import Footer from './Components/Footer';
-import Navbar from './Components/Navbar/Navbar';
-import Navigation from './Components/Navigation';
 import RootLayout from './Layout/RootLayout';
 import Home from './Pages/Home';
+import NotFound from './Pages/NotFound';
 
 import {
   Route,
@@ -34,9 +30,9 @@ const router = createBrowserRouter(
           element={<CareerDetails />}
           loader={careerDetailsLoader}
         />
-      </Route>
+      </Route> */}
 
-      <Route path="*" element={<NotFound />} /> */}
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );

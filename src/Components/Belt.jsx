@@ -1,15 +1,21 @@
 import './Belt.css';
+import { useState } from 'react';
 
-function generateBelts() {
+function generateBelts(isMobile = false) {
   let list = [];
-  for (let i = 1; i < 6; i++) {
+  let amount = isMobile ? 3 : 7;
+  for (let i = 1; i < amount; i++) {
     list.push(`belt-${i}.jpg`);
   }
   return list;
 }
 
 const Belt = () => {
-  const images = generateBelts();
+  const [matches, setMatches] = useState(
+    !window.matchMedia('(min-width: 768px)').matches
+  );
+
+  const images = generateBelts(matches);
   return (
     <div className="belt">
       {images.map((item, idx) => (

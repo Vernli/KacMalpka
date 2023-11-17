@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 20vh;
+  margin: 25px 0;
 }
 
 .info-container > .info {
@@ -28,4 +28,23 @@
 
 .icon-size {
   font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .info-container {
+    margin: 20px 0px;
+    flex-direction: column;
+  }
+
+  .info h3 {
+    font-size: 0.9rem;
+  }
+
+  .info p {
+    font-size: 0.7rem;
+  }
+
+  .icon-size {
+    font-size: 1.5rem;
+  }
 }
