@@ -1,21 +1,26 @@
-img
-{
-width: 100px;
-height: 100px;
-
-}
-
-.bgall
+.navstyle
 {
     background-color: #3C2F0E;
     color: bisque;
     font-family:'Times New Roman', Times, serif;
+
 }
-.up
+
+.imgcent
 {
-    padding: 0%;
+    display: flex;
+ 
+align-items:center;
 }
-.down
+
+.row
 {
-    margin: 10px;
+margin: 10px;
+}
+
+.sele
+{
+font-size: x-large;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color: chartreuse;
 }
