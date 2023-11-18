@@ -12,6 +12,7 @@ import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 
 const Navbar = () => {
   const [isDrop, setDrop] = useState(false);
+
   const [scroll, setScroll] = useState(false);
   const [matches, setMatches] = useState(
     !window.matchMedia('(min-width: 768px)').matches
@@ -72,6 +73,7 @@ const Navbar = () => {
           )}
         </div>
 
+        {/* Only on mobile  */}
         {isClicked ? (
           <div className="links-container">
             <NavLink to="/">O nas</NavLink>

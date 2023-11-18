@@ -1,16 +1,18 @@
 import { NavLink } from 'react-router-dom';
+import './DropdownLinks.css';
 
 const DropdownLinks = () => {
   return (
     <>
-      <NavLink to="/piwa">Piwa</NavLink>
-      <div className="underline"></div>
-      <NavLink to="/wodka">Wódka</NavLink>
-      <div className="underline"></div>
-      <NavLink to="/whisky">Whisky</NavLink>
-      <div className="underline"></div>
-      <NavLink to="/wina">Wina</NavLink>
-      <div className="underline"></div>
+      <div className="dropdown-links-container">
+        <NavLink to="/wodka">Wódka</NavLink>
+        <NavLink to="/whisky">Whisky</NavLink>
+        <NavLink to="/likiery-nalewki">Likiery/Nalewki</NavLink>
+        <NavLink to="/rumy">Rum</NavLink>
+        <NavLink to="/wina">Wino</NavLink>
+        <NavLink to="/szampany">Szampan</NavLink>
+        <NavLink to="/inne">Inne</NavLink>
+      </div>
     </>
   );
 };
