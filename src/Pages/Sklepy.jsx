@@ -1,4 +1,5 @@
+import ItemCard from '../Components/Product/ItemCard';
 const Sklepy = () => {
-  return <div>Sklepy</div>;
+  return <ItemCard />;
 };
 export default Sklepy;

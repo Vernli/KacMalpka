@@ -1,0 +1,12 @@
+.product-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+.product-price {
+  color: #e67e22;
+}
