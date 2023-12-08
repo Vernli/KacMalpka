@@ -1,12 +1,14 @@
-FROM node:14-alpine
+FROM node:20-alpine
 
-WORKDIR /app
+WORKDIR /react
 
-COPY package*.json ./
+COPY package.json ./
+
+ENV PATH /react/node_modules/.bin:$PATH
 
 RUN npm install
 
-COPY . /app
+COPY . /react
 
 RUN npm run build
 

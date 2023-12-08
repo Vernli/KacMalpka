@@ -1,11 +1,11 @@
-version: '3'
-services:
+version: '3.2'
 
+services:
   kacmalpka-mysql:
     image: "mysql:5.7"
     container_name: kacmalpka-mysql
     volumes:
-      - kacmalpka-data:/var/lib/mysql
+      - dbdata:/var/lib/mysql
     ports:
       - 3306:3306
     ulimits:
@@ -24,9 +24,12 @@ services:
       timeout: 5s
       retries: 55
 
+
   kacmalpka-app:
     build: ./kacmalpka-app
     container_name: kacmalpka-app
+    volumes:
+      - ./kacmalpka-app:/app
     environment:
       - DB_SERVER=kacmalpka-mysql
     ports:
@@ -38,17 +41,18 @@ services:
         condition: service_healthy
 
 
-  # COMMENT: na razie nie jest potrzebne, a wstrzymuje sprawdzenie czy baza + django dzialaja
-  # COMMENT: brakuje pliku package.json - jak ktos ogarnia npm i reakta to niech to zalatwi w wolnej chwili
-  # kacmalpka-fe:
-  #   build: ./kacmalpka-fe
-  #   container_name: kacmalpka-fe
-  #   ports:
-  #     - 4200:80
-  #   links:
-  #     - kacmalpka-app
+  kacmalpka-fe:
+    build: ./kacmalpka-fe
+    container_name: kacmalpka-fe
+    volumes:
+      - /react/node_modules
+      - ./kacmalpka-fe:/react
+    ports:
+      - 3000:3000
+    links:
+      - kacmalpka-app
 
 
 volumes:
-  kacmalpka-data:
+  dbdata:
   

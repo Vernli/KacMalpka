@@ -1,0 +1,9 @@
+.menu {
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  width: 35px;
+  height: 35px;
+  background-color: #f2d2bd;
+  border-bottom-left-radius: 50%;
+}
