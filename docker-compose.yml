@@ -29,7 +29,7 @@ services:
     build: ./kacmalpka-app
     container_name: kacmalpka-app
     volumes:
-      - ./kacmalpka-app:/app
+      - ./kacmalpka-app:/app    # binduje kacmalpka-app z hosta do /app w kontenerze
     environment:
       - DB_SERVER=kacmalpka-mysql
     ports:
@@ -45,14 +45,13 @@ services:
     build: ./kacmalpka-fe
     container_name: kacmalpka-fe
     volumes:
-      - /react/node_modules
-      - ./kacmalpka-fe:/react
+      - /react/node_modules     # pomijam folder node_modules z binda
+      - ./kacmalpka-fe:/react   # binduje podfolder kacmalpka-fe z hosta do folderu /react w kontenerze
     ports:
-      - 3000:3000
+      - 3000:3000 #zmienilem na domyslne na razie
     links:
       - kacmalpka-app
 
 
 volumes:
   dbdata:
-  
