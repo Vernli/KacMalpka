@@ -1,8 +1,8 @@
 /**/.*
 /**/.*/
 !/.gitignore
-kacmalpka-app/kac_django/__pycache__/*
-kacmalpka-app/store/__pycache__/*
+kacmalpka-app/kac_django/__pycache__/
+kacmalpka-app/store/__pycache__/
 *.pyc
 
 /kacmalpka-app/.venv
