@@ -40,7 +40,13 @@ class ReviewsAdmin(admin.ModelAdmin):
     list_display = ('rev_id', 'rev_score', 'rev_text', 'rev_date', 'prod_id')
 
 
-# TODO nie robilem tabel laczonych - ProductTags i TransactionProducts
+class ProductTagsAdmin(admin.ModelAdmin):
+    list_display = ('prod_id', 'tag_id')
+
+
+class TransactionProductsAdmin(admin.ModelAdmin):
+    list_display = ('prod_id', 'trans_id', 'trans_prod_amount')
+
 
 # Register your models here.
 admin.site.register(Roles, RolesAdmin)
@@ -51,3 +57,5 @@ admin.site.register(Products, ProductsAdmin)
 admin.site.register(Tags, TagsAdmin)
 admin.site.register(Prices, PricesAdmin)
 admin.site.register(Reviews, ReviewsAdmin)
+admin.site.register(ProductTags, ProductTagsAdmin)
+admin.site.register(TransactionProducts, TransactionProductsAdmin)
