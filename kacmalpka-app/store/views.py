@@ -4,6 +4,7 @@ from django.conf import settings
 from django.template import loader
 from .models import Products
 
+
 def index(request):
     template = loader.get_template("store/index.html")
     context = {
@@ -42,3 +43,19 @@ def wodka(request):
         'products': products,
     }
     return render(request, 'store/wodka.html', context)
+
+
+def login(request):
+    template = loader.get_template("store/log.html")
+    context = {
+        "test": 0
+    }
+    return HttpResponse(template.render(context, request))
+
+
+def register(request):
+    template = loader.get_template("store/reg.html")
+    context = {
+        "test": 0
+    }
+    return HttpResponse(template.render(context, request))
