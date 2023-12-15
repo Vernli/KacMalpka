@@ -61,7 +61,7 @@ class Prices(models.Model):
 class Reviews(models.Model):
     rev_id = models.IntegerField(primary_key=True)
     rev_score = models.IntegerField()
-    rev_text = models.CharField(max_length=55535, null="True")
+    rev_text = models.CharField(max_length=15000, null="True")
     rev_date = models.DateTimeField()
     prod_id = models.ForeignKey(Products, on_delete=models.CASCADE)
 
