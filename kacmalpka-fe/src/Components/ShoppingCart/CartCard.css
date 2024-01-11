@@ -1,5 +1,6 @@
 .cart-card {
     position: relative;
+    min-width: 500px;
     display: flex;
     justify-content: space-between;
     background-color: var(--bg-secondary);
