@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, re_path
 from .views import wodka
 
 from . import views
@@ -12,4 +12,8 @@ urlpatterns = [
     path("whisky.html", views.whisky, name="index"),
     path("wodka.html", views.wodka, name="index"),
     path('wodka/', wodka, name='wodka'),
+    re_path(r'^api/products/$', views.products_list),
+    re_path(r'^api/prod_tags/$', views.prodtags_list),
+    re_path(r'^api/tags/$', views.tags_list),
+    re_path(r'^api/products/([0-9])$', views.products_detail),
 ]
